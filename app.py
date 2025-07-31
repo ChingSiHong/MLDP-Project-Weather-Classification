@@ -31,12 +31,6 @@ st.markdown(
         box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
         color: #000;
     }
-    .stForm input, 
-    .stForm select, 
-    .stForm selectbox
-    .stForm textarea {
-        color: white !important;
-    }
     .stForm {
         background-color: white;
         border: 1px solid #e1e1e1;
