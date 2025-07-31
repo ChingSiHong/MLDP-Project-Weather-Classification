@@ -14,6 +14,9 @@ st.set_page_config(
 st.markdown(
     """
     <style>
+    .stApp, .stApp * {
+        color: black !important;
+    }
     .stApp {
         background-color: #e6f3f5;
         background: url('https://t3.ftcdn.net/jpg/05/12/49/76/360_F_512497688_LvVSsqt4bTuWtdkdNzH7MPnfADWPCt56.jpg') no-repeat center center fixed;
@@ -147,7 +150,6 @@ with col1:
             'overcast': 3
         }
 
-        # Calculate uv_group and visibility_band first
         if uv <= 2:
             uv_group = "Low"
         elif uv <= 7:
@@ -162,11 +164,9 @@ with col1:
         else:
             visibility_band = "High"
 
-        # Calculate interaction features
         wind_x_temp = wind_speed * temperature
         vis_x_humid = visibility * humidity
 
-        # Core input dictionary including interaction features
         input_dict = {
             'Temperature': temperature,
             'Humidity': humidity,
@@ -178,7 +178,6 @@ with col1:
             'Cloud Cover': cloud_cover_map[cloud_cover_label],
             'Wind_x_Temp': wind_x_temp,
             'Vis_x_Humid': vis_x_humid,
-            # One-hot encoded categorical variables
             f'visibility_band_{visibility_band}': 1,
             f'uv_group_{uv_group}': 1,
             'Season_Autumn': 1 if season == 'autumn' else 0,
@@ -190,7 +189,6 @@ with col1:
             'Location_mountain': 1 if location == 'mountain' else 0,
         }
 
-        # Add missing columns with 0 to match model features
         for col in model_features:
             if col not in input_dict:
                 input_dict[col] = 0
