@@ -1,5 +1,4 @@
 import streamlit as st
-import numpy as np
 import pandas as pd
 import joblib
 
@@ -17,7 +16,7 @@ st.markdown(
     <style>
     .stApp {
         background-color: #e6f3f5;
-        background: url('https://t3.ftcdn.net/jpg/05/12/49/76/360_F_512497688_LvVSsqt4bTuWtdkdNzH7MPnfADWPCt56.jpg') no-repeat center center fixed;
+        background: url('https://t3.ftcdn.net/jpg/02/76/44/92/360_F_276449235_z71XmvtwDHfqxNt6UCK5yl4mAplD3cds.jpg') no-repeat center center fixed;
         background-size: cover;
     }   
     .stExpander {
