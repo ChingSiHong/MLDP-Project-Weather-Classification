@@ -16,8 +16,9 @@ st.markdown(
     <style>
     .stApp {
         background-color: #e6f3f5;
-        background: url('https://t3.ftcdn.net/jpg/02/76/44/92/360_F_276449235_z71XmvtwDHfqxNt6UCK5yl4mAplD3cds.jpg') no-repeat center center fixed;
+        background: url('https://t3.ftcdn.net/jpg/05/12/49/76/360_F_512497688_LvVSsqt4bTuWtdkdNzH7MPnfADWPCt56.jpg') no-repeat center center fixed;
         background-size: cover;
+        color: #000;
     }   
     .stExpander {
         background-color: white;
@@ -25,6 +26,7 @@ st.markdown(
         border-radius: 12px;
         padding: 20px;
         box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+        color: #000;
     }
     .stForm {
         background-color: white;
@@ -33,13 +35,14 @@ st.markdown(
         padding: 20px;
         box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
         margin-bottom: 2rem;
+        color: #000;
     }
     .stSuccess {
         background-color: #d4edda;
         border: 1px solid #c3e6cb;
         padding: 10px;
         border-radius: 5px;
-        color: #155724;
+        color: #000;
     }
     </style>
     """,
